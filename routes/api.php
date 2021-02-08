@@ -18,8 +18,8 @@ Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
 Route::post('editCustomer/{id}', [CustomerController::class, 'editCustomer']);
 Route::post('deposit/{id}/{sum}', [CustomerController::class, 'deposit']);
-Route::get('withdraw/{id}/{sum}', [CustomerController::class, 'withdraw']);
-Route::get('report', [CustomerController::class, 'report']);
+Route::post('withdraw/{id}/{sum}', [CustomerController::class, 'withdraw']);
+Route::post('report', [CustomerController::class, 'report']);
 
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
